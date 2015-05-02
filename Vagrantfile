@@ -88,5 +88,11 @@ Vagrant.configure(2) do |config|
   git config --global user.name "Alex Taylor"
   git config --global user.email "ataylor@skylabhq.com"
   
+  # Install MongoDB and gems (for twtfu)
+  sudo apt-get install -y mongodb
+  gem install twitter
+  gem install mongo_mapper
+  gem install bson_ext # recommended by mongo_mapper
+
   SHELL
 end
